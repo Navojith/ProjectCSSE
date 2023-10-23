@@ -293,7 +293,15 @@ const PlaceOrders = () => {
           onPress={() => handleDeleteItem(item)}
         />
         <Image
-          source={item.url ?? require('../../assets/images/noImg.jpg')}
+          source={
+            item.itemName === 'Excavator'
+              ? require('../../assets/images/excavator.png')
+              : item.itemName === 'Steel Cable'
+              ? require('../../assets/images/cable.webp')
+              : item.itemName === 'Cement'
+              ? require('../../assets/images/cement.jpg')
+              : require('../../assets/images/noImg.jpg')
+          }
           style={{ width: 100, height: 100 }}
         />
         <View className="flex flex-col">

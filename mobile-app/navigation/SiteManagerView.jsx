@@ -34,7 +34,7 @@ const SiteManagerView = ({ user }) => {
         sceneContainerStyle={{ backgroundColor: 'white' }}
       >
         <Tab.Screen
-          name={'home'}
+          name={'Home'}
           component={SiteManagerHomeStack}
           options={({ route }) => ({
             tabBarIcon: ({ focused }) => (
@@ -47,7 +47,7 @@ const SiteManagerView = ({ user }) => {
           })}
         />
         <Tab.Screen
-          name={'orders'}
+          name={'Orders'}
           component={Orders}
           options={({ route }) => ({
             tabBarIcon: ({ focused }) => (
@@ -60,7 +60,7 @@ const SiteManagerView = ({ user }) => {
           })}
         />
         <Tab.Screen
-          name={'notifications'}
+          name={'Notifications'}
           component={Notifications}
           options={({ route }) => ({
             tabBarIcon: ({ focused }) => (

@@ -18,7 +18,7 @@ const Home = ({ navigation }) => {
   };
 
   const handlePressViewPlacedOrders = () => {
-    navigation.navigate('orders', {
+    navigation.navigate('Orders', {
       // Generate a unique key to force remount of the component
       key: `orders-${Math.random()}`,
     });

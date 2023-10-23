@@ -154,12 +154,12 @@ const CreateOrderItemsModal = ({
                   </Picker>
                 </View>
 
-                <Text className={'text-lg  mb-2 mt-6 font-bold'}>Supplier</Text>
+                {/* <Text className={'text-lg  mb-2 mt-6 font-bold'}>Supplier</Text>
                 <TextInput
                   value={supplier && supplier}
                   readOnly={true}
                   className={'border border-1 rounded-xl p-[12px] '}
-                />
+                /> */}
 
                 <Text className={'text-lg mt-6 mb-2  font-bold'}>
                   Select Site Address
