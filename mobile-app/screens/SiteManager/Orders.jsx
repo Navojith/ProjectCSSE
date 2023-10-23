@@ -11,7 +11,7 @@ import { CreateOrderURI, GetAllOrdersURI } from '../../constants/URI';
 import { auth } from '../../firebase';
 
 const Orders = ({ navigation: { goBack }, route }) => {
-  const [orders, setOrders] = useState([]);
+  const [orders, setOrders] = useState(null);
   const [componentKey, setComponentKey] = useState(
     route.params?.key || 'initial-key'
   );
@@ -44,6 +44,12 @@ const Orders = ({ navigation: { goBack }, route }) => {
     };
 
     fetchOrders();
+
+    return () => {
+      // Clear the orders data when the component is unmounted
+      setOrders(null);
+      setIsLoading(true);
+    };
   }, [componentKey, route.params?.key]);
 
   const handlePublish = async (order) => {
